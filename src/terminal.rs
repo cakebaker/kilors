@@ -33,10 +33,22 @@ impl Terminal {
         print!("{}", termion::clear::All);
     }
 
+    pub fn clear_current_line() {
+        print!("{}", termion::clear::CurrentLine);
+    }
+
     pub fn cursor_position(x: u16, y: u16) {
         let x = x.saturating_add(1);
         let y = y.saturating_add(1);
         print!("{}", termion::cursor::Goto(x, y));
+    }
+
+    pub fn cursor_hide() {
+        print!("{}", termion::cursor::Hide);
+    }
+
+    pub fn cursor_show() {
+        print!("{}", termion::cursor::Show);
     }
 
     pub fn flush() -> Result<(), std::io::Error> {
