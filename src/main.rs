@@ -17,6 +17,7 @@ use editor::Editor;
 use row::Row;
 use terminal::Terminal;
 use editor::Position;
+use editor::SearchDirection;
 
 fn main() {
     Editor::default().run();
