@@ -9,6 +9,7 @@
 )]
 mod document;
 mod editor;
+mod filetype;
 mod highlighting;
 mod row;
 mod terminal;
@@ -19,6 +20,8 @@ use row::Row;
 use terminal::Terminal;
 use editor::Position;
 use editor::SearchDirection;
+use filetype::FileType;
+use filetype::HighlightingOptions;
 
 fn main() {
     Editor::default().run();
